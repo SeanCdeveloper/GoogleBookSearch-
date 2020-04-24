@@ -6,7 +6,7 @@ const SavedPage = () => {
     return (
     <div>Saved Page
     <CardWrapper/>
-    <Link to="/search" role="button" >Sign Up</Link>
+    <Link to="/search" role="button">Go to Search Page</Link>
     </div>
     )
 }

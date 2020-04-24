@@ -7,9 +7,7 @@ const CardWrapper = () => {
             <div className="row">
                 <div className="col md-12">
                     <div style={{marginTop: "30px"}} className="card">
-                        <div className="card-header">
-                            Featured
-            </div>
+                        <div className="card-header">Featured</div>
                         <div className="card-body">
                             <CardBody/>
                             <button className="btn btn-primary">Save</button>
