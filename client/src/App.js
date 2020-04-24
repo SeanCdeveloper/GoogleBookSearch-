@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 // import Books from "./pages/Books";
 import Nav from "./components/Nav";
-// import JumboTron from "./components/Nav";
+import JumboTron from "./components/Jumbotron/Jumbotron";
 import SearchPage from "./pages/SearchPage"
 import SavedPage from "./pages/SavedPage"
 
@@ -11,6 +11,7 @@ const App = () => {
     <Router>
       <div className="App">
         <Nav/>
+        <JumboTron/>
         <Route exact path="/" component={SearchPage}/>
         <Route exact path="/search" component={SearchPage}/>
         <Route exact path="/saved" component={SavedPage}/>
