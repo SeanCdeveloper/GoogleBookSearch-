@@ -1,4 +1,6 @@
 import React, {useState} from 'react';
+import API from "../../utils/API";
+
 
 const SearchForm = () => {
 
@@ -16,7 +18,7 @@ const SearchForm = () => {
     // console.log(event.target)
     // console.log(bookSearch);
     event.preventDefault();
-    API.getRecipes(bookSearch)
+    API.getBooks(bookSearch)
     .then(res => setBookSearch(res.data))
     .catch(err => console.log(err));
   }
