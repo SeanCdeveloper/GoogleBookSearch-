@@ -15,10 +15,10 @@ const SearchForm = () => {
     event.preventDefault();
     // console.log(event.target)
     // console.log(bookSearch);
-    // event.preventDefault();
-    // API.getRecipes(bookSearch)
-    // .then(res => setBookSearch(res.data))
-    // .catch(err => console.log(err));
+    event.preventDefault();
+    API.getRecipes(bookSearch)
+    .then(res => setBookSearch(res.data))
+    .catch(err => console.log(err));
   }
 
   return (
@@ -51,3 +51,6 @@ const SearchForm = () => {
 }
 
 export default SearchForm;
+
+
+// AIzaSyBdZJEhwuXan7FNjMb6iFqiol49jC-ZRTU
