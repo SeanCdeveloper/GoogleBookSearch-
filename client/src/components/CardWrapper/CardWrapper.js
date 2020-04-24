@@ -1,4 +1,5 @@
 import React from 'react';
+import CardBody from '../CardBody/CardBody'
 
 const CardWrapper = () => {
     return (
@@ -10,8 +11,7 @@ const CardWrapper = () => {
                             Featured
             </div>
                         <div className="card-body">
-                            <h5 className="card-title">Hello</h5>
-                            <p className="card-text">Text</p>
+                            <CardBody/>
                             <button className="btn btn-primary">Save</button>
                         </div>
                     </div>
