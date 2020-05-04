@@ -23,7 +23,7 @@ function App() {
     axios.get("https://www.googleapis.com/books/v1/volumes?q=" + book + "&key=AIzaSyBdZJEhwuXan7FNjMb6iFqiol49jC-ZRTU")
       .then(data => {
         const { items } = data.data;
-        console.log("item",items);
+        console.log("item", items);
         setResult(items)
         // console.log(data.data);
       })
@@ -33,8 +33,14 @@ function App() {
   /* Main Info is inside Volume Info */
 
   return (
-    <div className="container">
-      <h1></h1>
+    <div className="container-fluid">
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container-fluid">
+          <h1 class="display-4"><h1 style={{fontSize: "25pt",textAlign:"center"}}class="lead">Google Book Search</h1></h1>
+          <br/>
+          <p style={{fontFamily:"menlo",textAlign: "center"}}>Enter a Book's Title or Subject Below To View Online Books</p>
+        </div>
+      </div>
       <form>
         <div className="form-group">
           <input type="text"
@@ -50,11 +56,11 @@ function App() {
       </form>
       {result.map(book => (
         <div key={book._id}>
-        <a target="_blank" href={book.volumeInfo.previewLink}>
-          <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title} />
-        </a>
-        <p>{book.volumeInfo.title}</p>
-        <p>{book.volumeInfo.authors}</p>
+          <a target="_blank" href={book.volumeInfo.previewLink}>
+            <img src={book.volumeInfo.imageLinks.thumbnail} alt={book.title} />
+          </a>
+          <p>{book.volumeInfo.title}</p>
+          <p>{book.volumeInfo.authors}</p>
         </div>
       ))}
     </div>
